@@ -1,5 +1,6 @@
 // src/ProductList.jsx
 import React from 'react';
+import lappi from '../assests/lappi.jpg';
 
 function ProductList({ products, addToCart }) {
   return (

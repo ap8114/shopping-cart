@@ -9,57 +9,115 @@ body {
 .app {
   text-align: center;
   padding: 20px;
+  background-color: #eaeaea; /* Light gray background */
 }
 
 h1 {
-  color: #333;
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
 }
 
 .shop-container {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center container */
 }
 
 .product-list, .cart {
   width: 45%;
-  background: white;
+  background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  transition: transform 0.3s ease;
+}
+
+.product-list:hover, .cart:hover {
+  transform: translateY(-5px); /* Lift on hover for a slight 3D effect */
 }
 
 .product-card, .cart-item {
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 15px 0;
   text-align: left;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover, .cart-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow on hover */
 }
 
 .product-card img, .cart-item img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  margin-right: 15px;
+  border-radius: 10px; /* Rounded image corners */
 }
 
 button {
-  background-color: #007bff;
+  background-color: #28a745;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   margin-top: 10px;
+  margin-left: 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #218838;
 }
 
 .cart-controls button {
-  margin-right: 5px;
+  background-color: #ffc107;
+  color: #333;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-h3, p {
+.cart-controls button:hover {
+  background-color: #e0a800;
+}
+
+.cart-controls button:active {
+  transform: scale(0.95); /* Slight scale on click */
+}
+
+h2 {
+  font-size: 28px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #333;
   margin: 10px 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+h3.total-cost {
+  color: #e83e8c;
+  font-size: 24px;
+  font-weight: bold;
 }

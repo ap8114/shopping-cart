@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import ProductList from './ProductList';
 import Cart from './Cart';
 import './App.css';
+import lappi from '../assests/lappi.jpg';
+import headphone from '../assests/headphone.webp';
+import iphone from '../assests/iphone.jpg';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -12,19 +15,19 @@ function App() {
       id: 1,
       name: 'Laptop',
       price: 999.99,
-      image: 'https://via.placeholder.com/150',
+      image: lappi,
     },
     {
       id: 2,
       name: 'Headphones',
       price: 199.99,
-      image: 'https://via.placeholder.com/150',
+      image: headphone,
     },
     {
       id: 3,
       name: 'Smartphone',
       price: 799.99,
-      image: 'https://via.placeholder.com/150',
+      image: iphone,
     },
   ];
 
